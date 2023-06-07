@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title%}{{object.first_name}}{% endblock %}
+{% load static %}
+{% block content %}
+{% include 'includes/header.html' %}
+<div class="container ">
+    <div class="row d-flex align-items-center justify-content-center w-100">
+        <h1 class="text-center mt-3 mb-4">Detalle de un empleado </h1>
+
+    </div>
+    <div class="row d-flex align-items-center justify-content-center mt-3">
+        <div class="card" style="width: 22rem;">
+            {% if empleado.avatar %}
+            <img src="{{empleado.avatar.url}}" class="card-img-top" alt="...">
+            {% else %}
+            <img src="{% static 'img/usuario.png' %}" class="card-img-top" alt="...">
+            {% endif %}
+            
+            <div class="card-body bg-secondary text-white">
+              <h5 class="card-title">Todos los datos:</h5>
+            </div>
+            <ul class="list-group list-group-flush bg-secondary text-white">
+              <li class="list-group-item bg-secondary text-white">{{ empleado.first_name }}</li>
+              <li class="list-group-item bg-secondary text-white">{{ empleado.last_name }}</li>
+              <li class="list-group-item bg-secondary text-white">{{ empleado.departamento.short_name }}</li>
+              <p class="card-text text-center bg-secondary text-white">Habilidades:</p>
+            <ul class="lis-group">
+                {% for h in empleado.habilidades.all %}
+                    <li class="list-group-item bg-secondary text-white">{{h.habilidad}}</li>
+                {% endfor %}
+            |</ul>
+              
+            </ul>
+            
+        </div>
+    </div>
+    
+</div>
+
+    
+    {% endblock %}

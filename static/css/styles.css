@@ -1,0 +1,65 @@
+body{
+    background-color: bisque;
+}
+
+.texto1{
+    color: black !important;
+}
+
+.texto{
+    color: black !important;
+}
+
+#id_first_name{
+    width: 100% !important;
+    border-radius: 10px !important;
+    border-color:  rgb(212, 151, 81);
+}
+#id_last_name{
+    width: 100% !important;
+    border-radius: 10px !important;
+    border-color:  rgb(212, 151, 81);
+}
+#id_job{
+    width: 100% !important;
+    border-radius: 10px !important;
+    border-color:  rgb(212, 151, 81);
+}
+
+#id_departamento{
+    width: 100% !important;
+    border-radius: 10px !important;
+    border-color:  rgb(212, 151, 81);
+}
+
+
+#id_shortname{
+    width: 100% !important;
+    border-radius: 10px !important;
+    border-color:  rgb(212, 151, 81);
+}
+
+
+#id_apellidos{
+    width: 100% !important;
+    border-radius: 10px !important;
+    border-color:  rgb(212, 151, 81);
+}
+
+#id_nombre{
+    width: 100% !important;
+    border-radius: 10px !important;
+    border-color:  rgb(212, 151, 81);
+}
+
+
+.form-add{
+    background-color: burlywood;
+    margin-left: 3px;
+    border-radius: 10px;
+    margin-left: 3px !important;
+}
+.form-control{
+    width: 300px !important;
+}
+

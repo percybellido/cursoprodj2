@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title%}Actualizar empleado{% endblock %}
+{% load static %}
+{% block content %}
+{% include 'includes/header.html' %}
+<div class="container">
+    <div class="row">
+        <h1 class="col">Modificar datos de empleado</h1>
+    </div>
+
+    <form class="form row"action="" method="POST">{% csrf_token %}
+        <div class="mb-3 col-12">
+            <label for="exampleFormControlInput1" class="form-label">Nombres:
+                {{form.first_name}}
+            </label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3 col-12">
+            <label for="exampleFormControlInput1" class="form-label">Apellidos:
+                {{form.last_name}}
+            </label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3 col-12">
+            <label for="exampleFormControlInput1" class="form-label">Trabajo:
+                {{form.job}}
+            </label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3 col-12">
+            <label for="exampleFormControlInput1" class="form-label">Area:
+                {{form.departamento}}
+            </label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3 col-12">
+            <label for="exampleFormControlInput1" class="form-label">Habilidades Extra:
+                {{form.habilidades}}
+            </label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        
+        <button class="btn btn-primary" type="submit">Actualizar</button>
+
+    </form>
+
+    </div>
+</div>
+    
+
+{% endblock %}
+    

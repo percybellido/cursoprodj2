@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title%}Pagina de inicio del sistema de empleados{% endblock %}
+{% load static %}
+{% block content %}
+{% include 'includes/header.html' %}
+    <div class="container">
+        <div class="row mb-3">
+            <h1>Eliminar empleado:{{object.first_name}}</h1>
+        </div>
+        
+        <div class="row">
+            <form action="" method="POST">{% csrf_token %}
+                <div class="col-12">
+                    <div class="alert alert-primary" role="alert">
+                        <h4 class="alert-heading text-center">Desea eliminar este empleado</h4>
+                    </div> 
+                </div>
+                <button type="submit" class="btn btn-danger w-100">Confirmar</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
